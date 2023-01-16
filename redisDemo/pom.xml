@@ -47,5 +47,8 @@
   	<modules>
   		<module>jedisDemo</module>
   		<module>bootRedis</module>
+  		<module>aaa</module>
+  		<module>jedis</module>
+  		<module>boot</module>
   	</modules>
 </project>
