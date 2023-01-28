@@ -13,13 +13,22 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+import javax.servlet.http.HttpSession;
+
 @RestController
 @RequestMapping("/redisTest")
 public class RedisTestController {
 
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
-
+    
+    
+	@GetMapping("/testSession")
+    public String testSession(HttpSession session) {
+		
+        return session.getId();
+    }
+    
 	@GetMapping("testLockLua")
     public void testLockLua() {
         //1 声明一个uuid ,将做为一个value 放入我们的key所对应的值中

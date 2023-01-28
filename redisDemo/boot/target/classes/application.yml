@@ -10,3 +10,6 @@ spring:
         min-idle: 0 #连接池中的最小空闲连接
     port: 6379 #Redis服务器连接端口
     timeout: 1800000 #连接超时时间（毫秒）
+  session:
+    timeout: 86400 # 设置session失效时间
+    store-type: redis # 修改spring-session存储配置，默认存储到服务器内存中，现在设置存到redis中（关键）
